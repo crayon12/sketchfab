@@ -93,17 +93,6 @@
                 <li><a href="">Forum</a></li>
               </ul>
             </li>
-            <li class="section">
-              <a href="" class="link show-hover-menu">Blog</a>
-              <ul class="hover-menu" style="">
-                <li><a href="">New on Sketchfab</a></li>
-                <li><a href="">Community stories</a></li>
-                <li><a href="">Contests</a></li>
-                <li><a href="">Events</a></li>
-                <li><a href="">Tutorials</a></li>
-                <li><a href="">Inside Sketchfab</a></li>
-              </ul>
-            </li>
           </ul>
 
           <form class="search" data-action="search" action=".">
