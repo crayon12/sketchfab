@@ -4,10 +4,15 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 import '../static/css/base.css'
 import '../static/css/style.css'
+
+import headerPart from './components/common/header'
+import footerPart from './components/common/footer'
+Vue.component('header-part', headerPart);
+Vue.component('footer-part', footerPart);
 
 /* eslint-disable no-new */
 new Vue({

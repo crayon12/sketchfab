@@ -4,7 +4,8 @@ import Router from 'vue-router'
 import index from '../views/index'
 import modelList from '../views/modelList'
 import search from '../views/search'
-import login from '../components/user/login'
+import userCenter from '../views/userCenter'
+//import login from '../components/user/login'
 
 Vue.use(Router);
 
@@ -17,9 +18,9 @@ export default new Router({
       component: index
     },
     {
-      path: '/login',
-      name: 'login',
-      component: login
+      path: '/userCenter',
+      name: 'userCenter',
+      component: userCenter
     },
     {
       path: '/list',

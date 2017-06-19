@@ -4,9 +4,9 @@
       <header id="main-header" class="top  box-shadow-none">
         <div class="container">
           <div class="logo">
-            <a class="link" href="index.html">
+            <router-link class="link" to="/">
               <img src="/static/image/logo.png" width="121" height="30" class="visual" alt="Sketchfab">
-            </a>
+            </router-link>
           </div>
           <ul class="navigation">
             <li class="section">
@@ -91,17 +91,6 @@
                 <li><a href="">All users</a></li>
                 <li><a href="">Pros</a></li>
                 <li><a href="">Forum</a></li>
-              </ul>
-            </li>
-            <li class="section">
-              <a href="" class="link show-hover-menu">Blog</a>
-              <ul class="hover-menu" style="">
-                <li><a href="">New on Sketchfab</a></li>
-                <li><a href="">Community stories</a></li>
-                <li><a href="">Contests</a></li>
-                <li><a href="">Events</a></li>
-                <li><a href="">Tutorials</a></li>
-                <li><a href="">Inside Sketchfab</a></li>
               </ul>
             </li>
           </ul>
@@ -198,6 +187,124 @@
           </div>
         </form>
       </header>
+
+      <!--菜单列表  中小屏-->
+      <div class="responsive-navigation">
+
+        <!--未登录-->
+        <!--<div class="inner">
+            <div class="responsive-navigation-auth">
+                <a href="/login" class="button btn-medium btn-primary login">Login</a>
+                <a href="/signup" class="signup">No account? Sign up</a>
+            </div>
+
+            <ul class="section navigation">
+                <li>
+                    <a class="link title" href="/">Home</a>
+                </li>
+                <li>
+                    <a class="link title" >Explore</a>
+                    <ul class="section">
+                        <li><a class="link" >Popular</a></li>
+                        <li><a class="link" >Staff picks</a></li>
+                        <li><a class="link">Animations</a></li>
+                        <li><a class="link" >Virtual Reality</a></li>
+                        <li><a class="link" >Collections</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="link title">Community</a>
+                    <ul class="section">
+                        <li><a class="link" >All users</a></li>
+                        <li><a class="link" >Pros</a></li>
+                        <li><a class="link" >Forum</a></li>
+                        <li><a class="link">Help &amp; FAQ</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="link title" >Blog</a>
+                    <ul class="section">
+                        <li><a class="linkavigation">New on Sketchfab</a></li>
+                        <li><a class="link">Community stories</a></li>
+                        <li><a class="link">Contests</a></li>
+                        <li><a class="link">Events</a></li>
+                        <li><a class="link">Tutorials</a></li>
+                        <li><a class="link">Inside Sketchfab</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>-->
+
+        <!--用户登录-->
+        <div class="inner">
+          <ul class="section navigation">
+            <li>
+              <a class="user-name">
+                <div class="wrapper ">
+                  <div class="avatar " >
+                    <div class="image-container" style="width:20px; ;  background-image: url('/static/image/avatar.jpeg');">
+                      <div style="padding-top:100.0%;"></div>
+                    </div>
+                  </div>
+                  <div class="text">
+                    <div class="username-wrapper" title="yjt">yjt</div>
+                  </div>
+                </div>
+              </a>
+              <ul class="section">
+                <li><a class="link" href="/">Newsfeed</a></li>
+                <li><a class="link" href="https://sketchfab.com/yjt/models">Models</a></li>
+                <li><a class="link" href="https://sketchfab.com/yjt/collections">Collections</a></li>
+                <li><a class="link" href="https://sketchfab.com/yjt/likes">Likes</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="link title" href="/models/popular">Explore</a>
+              <ul class="section">
+                <li><a class="link" href="/models/popular">Popular</a></li>
+                <li><a class="link" href="/models/staffpicks">Staff picks</a></li>
+                <li><a class="link" href="/models?date=week&amp;features=animated&amp;sort_by=-likeCount">Animations</a></li>
+                <li><a class="link" href="/virtual-reality">Virtual Reality</a></li>
+                <li><a class="link" href="/collections/popular">Collections</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="link title" href="/members">Community</a>
+              <ul class="section">
+                <li><a class="link" href="/members">All users</a></li>
+                <li><a class="link" href="/members/pros">Pros</a></li>
+                <li><a class="link" href="https://forum.sketchfab.com?utm_source=website&amp;utm_campaign=responsive_navigation">Forum</a></li>
+                <li><a class="link" href="https://help.sketchfab.com/hc/en-us?utm_source=website&amp;utm_campaign=responsive_navigation">Help &amp; FAQ</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="link title" href="https://blog.sketchfab.com?utm_source=website&amp;utm_campaign=responsive_navigation" target="_blank">Blog</a>
+              <ul class="section">
+                <li><a class="link" >New on Sketchfab</a></li>
+                <li><a class="link" >Community stories</a></li>
+                <li><a class="link" >Contests</a></li>
+                <li><a class="link" >Events</a></li>
+                <li><a class="link" >Tutorials</a></li>
+                <li><a class="link" >Inside Sketchfab</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="link title" >My profile</a>
+              <ul class="section">
+                <li><a class="link" href="/settings/profile">Settings</a></li>
+                <li class="link"><a href="/plans">Go Pro</a></li>
+                <li>
+                  <form action="/logout" method="post">
+                    <input type="hidden"  >
+                    <button type="submit" class="btn-textified">Logout</button>
+                  </form>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="responsive-navigation-bind-out"></div>
     </div>
 </template>
 
