@@ -1,17 +1,14 @@
 <template>
   <div class="popup-container popup-signup">
-
     <div class="popup-overlay" style="width:100%; height: 100%;">
     </div>
-
     <form class="popup" method="post" >
-      <input type="hidden" name="csrfmiddlewaretoken" value="">
       <header class="popup-header">
         <div class="popup-title">
           Sign up
         </div>
         <div class="popup-actions">
-          <a class="popup-close" data-action="close">
+          <a class="popup-close" @click="close()">
             <i class="fa fa-times"></i>
           </a>
         </div>
@@ -88,7 +85,7 @@
       </div>
       <footer class="popup-footer">
         <div class="bridge">
-          Already have an account? <a href="/login" data-action="open-login">Log in here</a>
+          已经有账户? <a @click="openLogin">点我登陆</a>
         </div>
       </footer>
     </form>
@@ -100,6 +97,15 @@
 		name: 'register',
 		data () {
 			return {}
-		}
+		},
+    methods:{
+      close(){
+        this.$parent.registerF = false;
+      },
+      openLogin(){
+        this.$parent.registerF = false;
+        this.$parent.loginF = true;
+      }
+    }
 	}
 </script>

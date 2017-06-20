@@ -5,25 +5,19 @@
     </div>
 
     <form class="popup" method="post">
-      <input type="hidden"  >
-
       <header class="popup-header">
         <div class="popup-title">
           Login
         </div>
         <div class="popup-actions">
-          <a class="popup-close" data-action="close">
+          <a class="popup-close" @click="close()">
             <i class="fa fa-times"></i>
           </a>
         </div>
       </header>
 
       <div class="popup-content">
-
         <div class="popup-content-overlay"></div>
-
-
-
         <div class="form-column-layout" data-action="process-login">
 
           <div class="form-global-error cloaked">
@@ -84,7 +78,7 @@
 
 
         <div class="bridge">
-          No account? <a href="/signup" data-action="open-signup">Sign up for free!</a>
+          还没有账户? <a @click="openSignUp">点我注册!</a>
         </div>
       </footer>
     </form>
@@ -96,6 +90,16 @@
 		name: 'login',
 		data () {
 			return {}
-		}
+		},
+    methods:{
+			close(){
+        this.$parent.loginF = false;
+      },
+      openSignUp(){
+        this.$parent.loginF = false;
+        this.$parent.registerF = true;
+      }
+    }
+
 	}
 </script>
