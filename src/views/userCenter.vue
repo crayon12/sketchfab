@@ -282,3 +282,9 @@
 		}
 	}
 </script>
+
+
+<style>
+  .profile-tabs .sidebar,
+  .two-columns.sidebar-right .right .sidebar-box{text-align: left}
+</style>

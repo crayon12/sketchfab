@@ -45,3 +45,10 @@ img{
 .query-filters .form-menu-list,.query-filters .form-menu-list>*{
 margin-top: 0 !important;
 }
+
+
+.item{position: relative}
+.user-summary {top: 95%;left: 5%;}
+.image-container{position: relative;width: 100%;}
+.model-card-filter{left: 0}
+.model-card-user{text-align: left}

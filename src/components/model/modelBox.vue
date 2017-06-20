@@ -149,10 +149,3 @@
 	}
 </script>
 
-<style scoped>
-  .item{position: relative}
-  .user-summary {top: 95%;left: 5%;}
-  .image-container{position: relative;width: 100%;}
-  .model-card-filter{left: 0}
-  .model-card-user{text-align: left}
-</style>
