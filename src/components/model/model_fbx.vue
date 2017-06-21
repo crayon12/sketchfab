@@ -305,7 +305,7 @@
   </div>
 </template>
 <script>
-//  import * as three from 'three';
+  import * as three from 'three';
 
   export default {
     name: 'model_fbx',
