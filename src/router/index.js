@@ -10,6 +10,8 @@ import searchModels from '../components/search/models'
 import searchUsers from '../components/search/users'
 import searchCollections from '../components/search/collections'
 import tags from '../views/tags'
+import model from '../views/model'
+import model_fbx from '../components/model/model_fbx'
 //import login from '../components/user/login'
 
 Vue.use(Router);
@@ -65,5 +67,15 @@ export default new Router({
       name: 'tags',
       component: tags
     },
+    {
+      path: '/model',
+      name: 'model',
+      component: model
+    },
+    {
+      path: '/model_fbx',
+      name: 'model_fbx',
+      component: model_fbx
+    }
   ]
 })
